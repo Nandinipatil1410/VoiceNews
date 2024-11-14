@@ -69,10 +69,10 @@ const App = () => {
         {news.length > 0 ? (
           news.map((article, index) => (
             <NewsCard
-              title={article.title}
-              description={article.description}
-              url={article.url}
-              imageUrl={article.image_url}
+            title={article.title}
+            description={article.description}
+            link={article.link}
+            imageUrl={article.image_url}
             />
 
           ))
