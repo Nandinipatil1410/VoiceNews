@@ -1,12 +1,13 @@
 const API_KEY = process.env.REACT_APP_API_KEY; 
-const API_URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
+const API_URL = `https://newsdata.io/api/1/news?apikey=${API_KEY}&q=news&country=in&language=en&category=business,education,environment,sports,world`;
 
 const getNews = async () => {
   try {
     const response = await fetch(API_URL);
     const data = await response.json();
+
     if (response.ok) {
-      return data.articles;  
+      return data.results;  
     } else {
       console.error('Failed to fetch news:', data.message);
       return []; 

@@ -3,7 +3,7 @@ import NewsCard from './NewsCard.js';
 import getNews from './newsService.js';
 import GreetingButton from './components/GreetingButton.js';
 import Header from './components/Header.js';
-import './App.css'; 
+import './App.css';
 
 const App = () => {
   const [news, setNews] = useState([]);
@@ -69,12 +69,12 @@ const App = () => {
         {news.length > 0 ? (
           news.map((article, index) => (
             <NewsCard
-              key={index}
               title={article.title}
               description={article.description}
               url={article.url}
-              imageUrl={article.urlToImage}
+              imageUrl={article.image_url}
             />
+
           ))
         ) : (
           <p>Loading news...</p>
