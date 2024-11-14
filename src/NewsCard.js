@@ -3,7 +3,7 @@ import './NewsCardStyle.css';
 import defaultImage from './resources/default-image.jpg'; 
 
 
-const NewsCard = ({ title, description, url, imageUrl }) => {
+const NewsCard = ({ title, description, link, imageUrl }) => {
   const imageToDisplay = imageUrl ? imageUrl : defaultImage; 
   
   return (
@@ -12,7 +12,7 @@ const NewsCard = ({ title, description, url, imageUrl }) => {
       <div className="card-content">
         <h3>{title}</h3>
         <p>{description}</p>
-        <a href={url} target="_blank" rel="noopener noreferrer">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           Read more
         </a>
       </div>
